@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(() => {
 	return {
 		build: {
-			outDir: "<output path>",
+			//outDir: "<output path>",
 			sourcemap: true, // an inline sourcemap file will be generated
 			cssCodeSplit: false, // all CSS will be in one file
 			rollupOptions: {

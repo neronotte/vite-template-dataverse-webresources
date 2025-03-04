@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export default class LocalControlsProcessControl implements Xrm.Controls.ProcessControl {
 
 	displayState: Xrm.DisplayState;

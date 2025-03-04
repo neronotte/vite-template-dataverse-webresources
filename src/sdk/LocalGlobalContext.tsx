@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import LocalClientContext from "./LocalClientContext";
 import LocalOrganizationSettings from "./LocalOrganizationSettings";
 import LocalUserSettings from "./LocalUserSettings";
-
 
 
 /**
@@ -20,6 +22,7 @@ export default class LocalGlobalContext implements Xrm.GlobalContext {
 
 
 	getAdvancedConfigSetting(setting: "MaxChildIncidentNumber" | "MaxIncidentMergeNumber"): number {
+		console.log(setting);
 		return 10;
 	}
 	getClientUrl(): string {

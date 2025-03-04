@@ -1,6 +1,7 @@
-# _neronotte's / vite-template-dataverse-webresources
+# _neronotte's / vite-template-dataverse-webresources for Dataverse Forms
 
-Since `create-react-app` has been [**deprecated**](https://react.dev/blog/2025/02/14/sunsetting-create-react-app#how-to-migrate-to-a-framework), here a **Vite template** to scaffold **Vite+React+Typescript+FluentUI** Dataverse WebResources ready to use. The structure of the template is equal to the one used by [@_neronotte/cra-template-dataverse-webresource](https://dev.to/_neronotte/dataverse-web-resources-with-react-typescript-and-fluentui-neronottes-way-3n40).
+Since `create-react-app` has been [**deprecated**](https://react.dev/blog/2025/02/14/sunsetting-create-react-app#how-to-migrate-to-a-framework), here a **Vite template** to scaffold **Vite+React+Typescript+FluentUI** Dataverse WebResources ready to use while embedded in a model driven app form. 
+The structure of the template is equal to the one used by [@_neronotte/cra-template-dataverse-webresource-form](https://dev.to/_neronotte/form-based-dataverse-web-resources-with-react-typescript-and-fluentui-part-2-84d).
 
 ## ⬇️ Installation
 
@@ -23,10 +24,9 @@ Where `<your-webresource-name>` is the name of the webresource you want to creat
 Once the template has been installed, move in the `.\<your-webresource-name>` folder and:
 
 1. Change the value of the **title** tag of the `./index.html` page to provide a meaningful title for your webresource.
-2. If needed, in the same `./index.html` page change the relative url of `./ClientGlobalContext.js.aspx` page.
-3. Update `./src/App.tsx` file, the entry point of your custom webresource.
-4. Calculate the path of the folder where you want to save the build outputs, relative to the one of the current package, search for all the occurrence of the `<output path>` string and replace it with the calculated path (there should be just 1 occurrence, in the `vite.config.ts` file).
-5. Update the `name` token in the `package.json` file setting a meaningful name for your webresource
+2. Update `./src/App.tsx` file, the entry point of your custom webresource.
+3. Calculate the path of the folder where you want to save the build outputs, relative to the one of the current package, search for all the occurrence of the `<output path>` string and replace it with the calculated path (there should be just 1 occurrence, in the `vite.config.ts` file).
+4. Update the `name` token in the `package.json` file setting a meaningful name for your webresource
 
 ## ✏️ References
 

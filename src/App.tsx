@@ -1,4 +1,5 @@
 import { FluentProvider, makeStyles, webLightTheme, tokens } from "@fluentui/react-components";
+import GlobalContext from "./sdk/GlobalContext";
 
 const useStyles = makeStyles({
 	root: {
@@ -32,8 +33,10 @@ function App() {
 	return (
 		<FluentProvider theme={webLightTheme} className={classes.root}>
 			<div className={classes.container}>
-				<h1>Sample WebResource</h1>
-				<p>Insert your content here.</p>
+				<h1>Form Wired WebResource</h1>
+				<p>
+				{GlobalContext.getFormContext().data.entity.getEntityName()}: {GlobalContext.getFormContext().data.entity.getId()}
+				</p>
 			</div>
 		</FluentProvider>
 	);

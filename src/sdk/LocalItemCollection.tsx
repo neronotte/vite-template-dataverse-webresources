@@ -1,7 +1,9 @@
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 export default class LocalItemCollection<T> implements Xrm.Collection.ItemCollection<T> {
 	forEach(delegate: Xrm.Collection.IterativeDelegate<T>): void {
+		console.log(delegate);
 		throw new Error("Method not implemented.");
 	}
 	get(delegate: Xrm.Collection.MatchingDelegate<T>): T[];
