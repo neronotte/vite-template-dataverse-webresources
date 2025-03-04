@@ -1,6 +1,6 @@
 # _neronotte's / vite-template-dataverse-webresources
 
-Since `create-react-app` has been **deprecated**, here a **Vite template** to scaffold **Vite+React+Typescript+FluentUI** Dataverse WebResources ready to use. The structure of the template is equal to the one used by [@_neronotte/cra-template-dataverse-webresource](https://dev.to/_neronotte/dataverse-web-resources-with-react-typescript-and-fluentui-neronottes-way-3n40).
+Since `create-react-app` has been [**deprecated**](https://react.dev/blog/2025/02/14/sunsetting-create-react-app#how-to-migrate-to-a-framework), here a **Vite template** to scaffold **Vite+React+Typescript+FluentUI** Dataverse WebResources ready to use. The structure of the template is equal to the one used by [@_neronotte/cra-template-dataverse-webresource](https://dev.to/_neronotte/dataverse-web-resources-with-react-typescript-and-fluentui-neronottes-way-3n40).
 
 ## ⬇️ Installation
 
@@ -30,8 +30,9 @@ Once the template has been installed, move in the `.\<your-webresource-name>` fo
 
 ## ✏️ References
 
-[Webpage (HTML) web resources](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/webpage-html-web-resources?view=op-9-1)
-[GetGlobalContext function and ClientGlobalContext.js.aspx (Client API reference)](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/getglobalcontext-clientglobalcontext.js.aspx)
-[Goodbye HTML Web Resources...](https://dianabirkelbach.wordpress.com/2021/09/29/goodbye-html-web-resources/)
-[Vite](https://vite.dev/guide/)
-[Degit](https://github.com/Rich-Harris/degit)
+- [My Blog](https://dev.to/_neronotte)
+- [Webpage (HTML) web resources](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/webpage-html-web-resources?view=op-9-1)
+- [GetGlobalContext function and ClientGlobalContext.js.aspx (Client API reference)](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/getglobalcontext-clientglobalcontext.js.aspx)
+- [Goodbye HTML Web Resources...](https://dianabirkelbach.wordpress.com/2021/09/29/goodbye-html-web-resources/)
+- [Vite](https://vite.dev/guide/)
+- [Degit](https://github.com/Rich-Harris/degit)
