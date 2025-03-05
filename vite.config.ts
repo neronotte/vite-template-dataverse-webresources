@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig(() => {
 	return {
+		base: "./",
 		build: {
 			outDir: "<output path>",
 			sourcemap: true, // an inline sourcemap file will be generated
