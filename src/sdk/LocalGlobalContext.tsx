@@ -22,7 +22,6 @@ export default class LocalGlobalContext implements Xrm.GlobalContext {
 
 
 	getAdvancedConfigSetting(setting: "MaxChildIncidentNumber" | "MaxIncidentMergeNumber"): number {
-		console.log(setting);
 		return 10;
 	}
 	getClientUrl(): string {
