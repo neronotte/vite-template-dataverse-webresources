@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export default class LocalWebApiOnline implements Xrm.WebApiOnline {
 	execute(request: any): Xrm.Async.PromiseLike<Xrm.ExecuteResponse> {
 		throw new Error("Method not implemented.");

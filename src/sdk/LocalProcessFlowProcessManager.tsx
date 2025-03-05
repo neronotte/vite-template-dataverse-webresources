@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export default class LocalProcessFlowProcessManager implements Xrm.ProcessFlow.ProcessManager {
 	getActiveProcess(): Xrm.ProcessFlow.Process {
 		throw new Error("Method not implemented.");

@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export default class LocalNavigation implements Xrm.Navigation {
 	navigateTo(pageInput: Xrm.Navigation.PageInputEntityRecord | Xrm.Navigation.PageInputEntityList | Xrm.Navigation.CustomPage | Xrm.Navigation.PageInputHtmlWebResource | Xrm.Navigation.Dashboard, navigationOptions?: Xrm.Navigation.NavigationOptions | undefined): Xrm.Async.PromiseLike<any> {
 		throw new Error("Method not implemented.");

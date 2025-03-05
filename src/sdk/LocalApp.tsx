@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export default class LocalApp implements Xrm.App {
 	addGlobalNotification(notification: Xrm.App.Notification): Xrm.Async.PromiseLike<string> {
 		throw new Error("Method not implemented.");

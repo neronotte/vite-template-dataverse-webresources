@@ -1,4 +1,5 @@
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 export default class LocalItemCollection<T> implements Xrm.Collection.ItemCollection<T> {
 	forEach(delegate: Xrm.Collection.IterativeDelegate<T>): void {

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export default class LocalMobileOffline implements Xrm.MobileOffline {
 	isOfflineEnabled(entityType: string): boolean {
 		return false;

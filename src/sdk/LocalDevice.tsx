@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export default class LocalDevice implements Xrm.Device {
 	captureAudio(): Xrm.Async.PromiseLike<Xrm.Device.CaptureFileResponse> {
 		throw new Error("Method not implemented.");

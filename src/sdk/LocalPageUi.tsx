@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import LocalControlsNavigation from "./LocalControlsNavigation";
 import LocalFooterSection from "./LocalControlsFooterSection";
 import LocalFormSelector from "./LocalControlsFormSelector";
@@ -57,7 +60,7 @@ export default class LocalPageUi implements Xrm.Ui {
 		const { width } = getWindowDimensions();
 		return width;
 	}
-	refreshRibbon(refreshAll?: boolean | undefined): void {
+	refreshRibbon(refreshAll?: boolean | undefined): void {	
 	}
 	removeOnLoad(handler: Xrm.Events.LoadEventHandler | Xrm.Events.LoadEventHandlerAsync): void {
 	}
