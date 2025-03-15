@@ -4,17 +4,17 @@ import GlobalContext from "./sdk/GlobalContext";
 const useStyles = makeStyles({
 	root: {
 		height: "100%",
-		padding: tokens.spacingHorizontalM,
-		backgroundColor: tokens.colorNeutralBackground2
+        padding: tokens.spacingHorizontalNone,
+        margin: tokens.spacingHorizontalNone,
+		backgroundColor: tokens.colorNeutralBackground1
 	},
 	container: {
 		height: "100%",
 		backgroundColor: tokens.colorNeutralBackground1,
-		boxShadow: tokens.shadow8,
-		padding: tokens.spacingHorizontalL,
+		padding: tokens.spacingHorizontalNone,
+        margin: tokens.spacingHorizontalNone,
 		fontSize: tokens.fontSizeBase300,
 		overflow: "auto",
-		borderRadius: tokens.borderRadiusMedium,
 		'& h1': {
 			marginTop: tokens.spacingVerticalNone,
 			fontSize: tokens.fontSizeBase500,

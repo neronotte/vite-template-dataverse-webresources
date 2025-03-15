@@ -28,6 +28,66 @@ Once the template has been installed, move in the `.\<your-webresource-name>` fo
 3. Calculate the path of the folder where you want to save the build outputs, relative to the one of the current package, search for all the occurrence of the `<output path>` string and replace it with the calculated path (there should be just 1 occurrence, in the `vite.config.ts` file).
 4. Update the `name` token in the `package.json` file setting a meaningful name for your webresource
 
+## 💉 Injecting global context into your webresource from the form JS
+
+The main difference between standard webresources and form-based webresource is the latter receives the global context,
+that allows the webresource to interact with the surrounding Power Platform environment, from the form itself.
+To do it you should create a JS webresource for your form (you can do it using PACX, via `pacx wr create js` command),
+and add the following on the onLoad method of your form web resource.
+
+```Javascript
+if (formContext.ui.getFormType() === 1 || formContext.ui.getFormType() === 2) { // create or update
+    this.setClientApiContext(formContext);
+}
+...
+
+setClientApiContext(formContext) {
+    const wrControl = formContext.getControl("WebResource_new_1"); // this is the name of the wr control that will be put in the form, you can change it if you want
+    if (!wrControl) return;
+
+    wrControl.getContentWindow().then(function (contentWindow) {
+        contentWindow.setClientApiContext(Xrm, formContext);
+    });
+}
+```
+
+A complete example is:
+
+```Javascript
+class Form {
+    formType = {
+        Create: 1,
+        Update: 2,
+        ReadOnly: 3,
+        Disabled: 4,
+        BulkEdit: 6,
+    };
+
+    onLoad(executionContext) {
+        const formContext = executionContext.getFormContext();
+        const formType = formContext.ui.getFormType();
+
+        if (formType === this.formType.Create || formType === this.formType.Update) {
+            this.setClientApiContext(formContext);
+        }
+    }
+
+    setClientApiContext(formContext) {
+        const wrControl = formContext.getControl("WebResource_new_1"); // this is the name of the wr control that will be put in the form, you can change it if you want
+        if (!wrControl) return;
+
+        wrControl.getContentWindow().then(function (contentWindow) {
+            contentWindow.setClientApiContext(Xrm, formContext);
+        });
+    }
+}
+
+ava = window.ava || {};
+ava.account = ava.account || {};
+ava.account.Form = new Form();
+```
+
+
 ## ✏️ References
 
 - [My Blog](https://dev.to/_neronotte)
@@ -36,3 +96,4 @@ Once the template has been installed, move in the `.\<your-webresource-name>` fo
 - [Goodbye HTML Web Resources...](https://dianabirkelbach.wordpress.com/2021/09/29/goodbye-html-web-resources/)
 - [Vite](https://vite.dev/guide/)
 - [Degit](https://github.com/Rich-Harris/degit)
+- [Form-based Dataverse Web Resources with React, Typescript and FluentUI](https://dev.to/_neronotte/form-based-dataverse-web-resources-with-react-typescript-and-fluentui-1d44)
